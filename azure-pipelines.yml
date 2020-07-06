@@ -27,9 +27,3 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/dockerfile'
         tags: |
           $(tag)
-
-    - task: AzureWebAppContainer@1
-      inputs:
-        azureSubscription: 'bv2dapp-rg'
-        appName: 'bv2dapp'
-        appSettings: '-WEBSITES_PORT 8000'
